@@ -1,0 +1,280 @@
+body{
+    margin: 0; /*elimina margenes predeterminados del navegador*/
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(90deg, #ccb3db 0%, hsl(278, 55%, 72%) 100%);
+    
+}
+
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+background: linear-gradient(to bottom, #FFAFCC 50%, #FFC8DD 50%);
+padding: 10px 20px;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+height: 80px;   
+border-radius: 30px 30px 0 0;
+border: 3px solid #d491a9;
+box-sizing: border-box;
+
+}
+.sidebar {
+    width: 40px; 
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    top: 75px;
+    height: calc(100vh - 80px);
+    border: 3px solid #d491a9;
+   background: #FFAFCC;
+   
+}
+.sidebar::before{
+    border-radius:  20px ;
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -2px;
+    width: 100%;
+    height: 36%;
+    background: #FFC8DD;
+    z-index: 1;
+}
+.search-box{
+    background: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 20px;
+    width: 150px;
+    padding: 5px 10px;
+    font-size: 12px;
+    outline: none;
+    color: white;
+    margin-top: -8.5px;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    left: 20px;
+    top: 15px;
+    margin-right: 40px;
+}
+.avion-container{
+    display: flex;
+    align-items: center;
+    margin-top: -3px;
+}
+.avion-container .fa-plane{
+    color: white ;
+    font-size: 24px;
+}
+.search-container i.fa-search{
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    right: 69px;
+    top: 26%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.sidebar::before{
+border: 3px solid #d491a9;
+}
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Línea en el centro vertical */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Grosor de la línea */
+    background: #d491a9; /* Color del borde */
+    z-index: 1;
+}
+.sidebar2{
+    width: 300px;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    top: 75px;
+    height: calc(100vh - 80px);
+    border: 3px solid #d491a9;
+    background: white;
+    box-sizing: border-box;
+}
+.sidebar2::before{
+   border-radius: 20px;
+   content: "";
+   position: absolute;
+   top: 10px;
+   left: 7.5px;
+   width: 273px;
+   height: 500px;
+   background: #FFC8DD;
+   z-index: 1;
+   border: 3px solid #d491a9;
+}
+h1{
+    font-size: 70px;
+    color: #ffc8dd;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: "Orbitron", serif;
+    left: 830px;
+}
+.about-me{
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    background: #FFC8DD;
+    border-radius: 150px;
+    z-index: 2;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+.avatar{
+    width: 90px;
+    height: 90px;
+    border-radius: 40%;
+    margin-bottom: 10px;
+}
+.about-me h2{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about-me h2 span{
+    color: white;
+}
+.about-me ul li{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+
+}
+.about-me ul li i{
+    font-size: 50px;
+    color: black;
+}
+.camera{
+    width: 60px;
+    height: 60px;
+}
+.assistant{
+    width: 60px;
+    height: 60px;
+}
+.web{
+    width: 60px;
+    height: 60px;
+}
+.about-me ul{
+    margin-left: -40%;
+    text-align: left;
+}
+.arrow{
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+.arrow {
+    width: 50px; /* Ajusta el tamaño de la flecha */
+    height: auto;
+    margin-right: 15px; /* Espacio entre la flecha y el texto */
+    vertical-align: middle; /* Alinea la flecha con el texto */
+    transition: transform 0.3s ease-in-out; /* Suaviza la animación */
+}
+
+h1:hover .arrow {
+    transform: translateX(10px); /* Mueve la flecha 10px a la derecha */
+}
+
+.about-me ul li{
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.about-me ul li:hover{
+    transform: scale(1.1);
+    color: black;
+}
+.about-me ul li img{
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.about-me ul li:hover img{
+transform: scale(1.2);
+filter: brightness(1.5);
+}
+.computer{
+    width: 100px; /* Ajusta el tamaño de la flecha */
+    height: auto;
+    margin-left: 650px; /* Espacio entre la flecha y el texto */
+    vertical-align: middle; /* Alinea la flecha con el texto */
+    transition: transform 0.3s ease-in-out; /* Suaviza la animación */
+ 
+}
+.flower{
+    width: 50px; /* Ajusta el tamaño de la flecha */
+    height: auto;
+    margin-left: 650px; /* Espacio entre la flecha y el texto */
+    vertical-align: middle; /* Alinea la flecha con el texto */
+    transition: transform 0.3s ease-in-out; /* Suaviza la animación */
+   margin-top: -500px;  
+}
+.social-icons {
+    position: absolute;
+    top: 90px; /* Ajusta la posición */
+    right: 80px; /* Ajusta la posición */
+    display: flex;
+    gap: 15px; /* Espaciado entre los iconos */
+    color: white;
+}
+
+.social-icons a {
+    color: white; /* Color inicial */
+    font-size: 30px; /* Tamaño de los iconos */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Agranda el icono al pasar el mouse */
+    color: black /* Cambia de color al pasar el mouse */ 
+}
+.social-icons a i {
+    display: inline-block; /* Asegura que los iconos sean visibles */
+}
+.about-me:hover {
+    transform: scale(1.1); /* Se agranda un 10% */
+    color: rgba(0, 0, 0, 0.696); /* Cambia el color del texto */
+    transition: transform 0.3s ease-out;
+}
+
+/* Para cambiar el color del título dentro del div */
+.about-me:hover h2, 
+.about-me:hover h2 span {
+    color: rgba(0, 0, 0, 0.562);
+}
+
